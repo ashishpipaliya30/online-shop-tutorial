@@ -1,88 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navigation</title>
-    <style>
-        body{
-            background-color: rgb(25, 25, 25);
-        }
-        .navbar {
-            background-color: rgb(87, 87, 87);
-            border-radius: 13px;
-        }
-
-        .navbar ul {
-            overflow: auto;
-        }
-
-        .navbar li {
-            float: left;
-            list-style: none;
-            margin: 13px 15px;
-            padding-top: 6px;
-        }
-
-        .navbar li a {
-            padding: 3px 3px;
-            text-decoration: none;
-            color: rgb(255, 255, 255);
-            font-size: 22px;
-        }
-
-        .navbar li a:hover {
-            background-color: rgb(57,57,57);
-            color: rgb(255, 255, 255);
-            padding: 13px 13px;
-        }
-
-
-        .search {
-            float: right;
-            color: black;
-            padding: 13px 35px;
-        }
-
-        .navbar input {
-            border: 2px solid #000000;
-            border-radius: 12px;
-            padding: 4px 0px;
-            font-size: 22px;
-            text-align:center;  
-        }
-    
-        .navbar li a:hover,
-        .navbar li a.active {
-           text-decoration:underline;
-        }
-
-        h1{
-            text-align: center;
-            margin-top: 400px;
-            font-size: 60px;
-            color: rgb(151, 153, 152);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Shopping</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+<style>
+    /* Default styles */
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+/* Global styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar {
+  /* background-color: #333; */
+  color: rgb(0, 0, 0);
+  padding: 15px 0;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links li:last-child {
+  margin-right: 0;
+}
+
+.nav-links a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.nav-links a:hover{
+    background-color: #ff6f61;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.hero {
+  background-image: url('hero-bg.jpg');
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: black;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #ff6f61;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e45749;
+}
+
+.featured-products {
+  padding: 50px 0;
+}
+
+.product {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.product h3 {
+  font-size: 24px;
+}
+
+.product p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.product span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff6f61;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.product button {
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.product button:hover {
+  background-color: #e45749;
+}
+
+.about-us {
+  background-color: #f9f9f9;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.about-us h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.about-us p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer p {
+  margin-bottom: 15px;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+}
+
+.social-links li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-links li:last-child {
+  margin-right: 0;
+}
+
+.social-links a {
+  color: white;
+  font-size: 20px;
+}
+
+
+</style>
 <body>
-    <header>
-        <nav class="navbar">
-            <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact us</a></li>
-                <div class="search">
-                    <input type="text" name="search" id="search" placeholder="search this website">
-                </div>
-            </ul>
-        </nav>
-        <h1>Navigation bar tutorial</h1>
+    <nav class="navbar">
+      <div class="container">
+        <h1 class="logo">MyShop</h1>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  
+    <header class="hero">
+      <div class="container">
+        <h1>Welcome to MyShop</h1>
+        <p>Your one-stop destination for all your shopping needs!</p>
+        <a href="#" class="btn">Shop Now</a>
+      </div>
     </header>
-
+  
+    <section class="featured-products">
+      <div class="container">
+        <h2>Featured Products</h2>
+        <div class="product">
+          <img src="product1.jpg" alt="Product 1">
+          <h3>Product 1</h3>
+          <p>Description of Product 1</p>
+          <span>$99.99</span>
+          <button>Add to Cart</button>
+        </div>
+        <!-- Add more product entries here -->
+      </div>
+    </section>
+  
+    <section class="about-us">
+      <div class="container">
+        <h2>About Us</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor lectus et elit sollicitudin, ut accumsan quam bibendum.</p>
+        <a href="#" class="btn">Learn More</a>
+      </div>
+    </section>
+  
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 MyShop. All Rights Reserved.</p>
+        <ul class="social-links">
+          <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </div>
+    </footer>
+  
+    <!-- Font Awesome CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" integrity="sha512-jNKfqOif+L99ymWsvuLU3Pe16rqP4r+flh/fkOb2l3lRjR5RxG6oR5TZUag+R9T6gMIpQqchJ7C0yKyjJky5bw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
-
 </html>
