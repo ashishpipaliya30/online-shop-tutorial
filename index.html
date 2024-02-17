@@ -71,23 +71,74 @@ body {
 }
 
 .hero {
-  background-image: url('hero-bg.jpg');
-  background-size: cover;
-  color: white;
-  text-align: center;
-  padding: 100px 0;
+    background-image: url('path/to/your/image.jpg'); /* Add your background image path here */
+    background-size: cover;
+    background-position: center;
+    color: #000000;
+    text-align: center;
+    padding: 100px 0; /* Adjust the padding as needed */
 }
 
 .hero h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-  color: black;
+    font-size: 3em;
+    margin-bottom: 20px;
 }
 
 .hero p {
-  font-size: 18px;
-  margin-bottom: 30px;
-  color: black;
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.hero .btn {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #ff6f61;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+.hero .btn:hover {
+    background-color: #e45749; /* Change color on hover */
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+    .hero {
+        padding: 80px 0; /* Adjust padding for smaller screens */
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .hero .btn {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero {
+        padding: 60px 0; /* Adjust padding for even smaller screens */
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 0.9em;
+    }
+
+    .hero .btn {
+        font-size: 0.9em;
+    }
 }
 
 .btn {
@@ -108,7 +159,13 @@ body {
   padding: 0px 0;
 }
 
+.container h3{
+  font-size: 30px;
+  text-align: center;
+}
+
 .product {
+  text-align: center;
   border: 1px solid #ddd;
   padding: 20px;
   margin-bottom: 20px;
@@ -244,16 +301,13 @@ body {
   
     <section class="featured-products">
       <div class="container">
-        <h2>Products</h2>
+        <h3>Products</h3>
         <div class="product">
           <img src="img/shoes.webp" alt="Product 1">
           <h3>Product 1</h3>
-          <p>Description of Product 1</p>
+          <p>Boys shoes with durable design suitable for everyday wear.</p>
           <span>$99.99</span>
           <button>Add to Cart</button>
-        </div>
-        <!-- Add more product entries here -->
-      </div>
     </section>
   
     <section class="about-us">
